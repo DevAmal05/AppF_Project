@@ -1,0 +1,46 @@
+<br>
+<br>
+<h1 style="color: palevioletred; padding-left:40px;padding-bottom: 30px;"> MODIFIER CONDUCTEUR </h1>
+<div class="form">
+  <div class="col-md-9 col-md-offset-3">
+    <form [formGroup]="formGroup" (validSubmit)="onSubmit1()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">Nom</label>
+        <input type="text" class="form-control" formControlName="firstName" name="firstname" value = "{{ data.firstname }}" [(ngModel)]="data.firstname">
+      </div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label class="control-label">Prénom</label>
+            <input type="text" class="form-control" formControlName="lastName" name="lastname" value = "{{ data.lastname }}" [(ngModel)]="data.lastname">
+          </div>
+        </div>
+        </div>
+        <div class="form-row">
+      <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">Téléphone</label>
+        <input type="number" class="form-control" formControlName="Phone" name="phone" value = "{{ data.phone }}" [(ngModel)]="data.phone">
+      </div>
+    </div>
+ 
+        <div class="col-md-6 mb-3">
+  <div class="form-group">
+    <label class="control-label">Adresse</label>
+    <input type="text" class="form-control" formControlName="Address" name="address" value = "{{ data.address }}" [(ngModel)]="data.address">
+  </div>
+  </div>
+  
+    </div>
+      
+       <button class="btn btn-primary pull-right" type="submit">Modifier</button>
+    </form>
+    <br>
+
+  <br>
+  <br>
+    </div> 
+</div>
+

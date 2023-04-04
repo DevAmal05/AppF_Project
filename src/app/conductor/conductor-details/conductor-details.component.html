@@ -1,0 +1,44 @@
+<br>
+
+<h1 class="h1style">Suivie Conducteur</h1>
+<br>
+<br><br>
+<br>
+<div class="row justify-content-md-center">
+  <div class="col col-lg-6">
+<div *ngFor="let item of conductorDetails">
+<div  class="card text-black  text-center" >
+        <h1> <div class="card-header">Conducteur: {{ item.firstname }} {{ item.lastname }}</div> </h1>
+        <div class="card-body">
+          <h1 class="card-title">Adresse: {{ item.address }}</h1>
+          <h1 class="card-text">Téléphone: {{ item.phone }}</h1>
+
+          <p *ngIf="item.state == 1; else elseBlock"> <button class="button button8" matTooltip="{{ item.message }}" ></button> 
+          </p> 
+          <ng-template #elseBlock>
+          <p> <button class="button button5" ></button> 
+          </p>  
+        </ng-template>
+    </div>
+      </div>
+    </div>
+        </div>
+       
+        <div style="margin-top: 50px;" class="col col-lg-2">
+           
+            
+           
+      <div class="card text-white bg-danger text-center" style="height: 160px; margin-left: 50px;">
+           <h1><div class="card-header"> Nombre </div></h1> 
+            <div class="card-body">
+              <h1 class="card-title">{{ nbnotification }} </h1>
+              <br>>
+                     </div>
+          </div>
+          </div>
+</div>
+
+
+
+
+       

@@ -1,0 +1,50 @@
+<div class="container">
+
+   
+
+<h1 style="color: palevioletred; padding-left:40px;padding-bottom: 30px;size: 100%; margin-left: auto;margin-right: auto">AJOUT D'UN NOUVEL UTILISATEUR </h1>
+<div class="row justify-content-center">
+<div class="form" >
+  <div class="col-md-9 col-md-offset-3">
+    <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">Nom</label>
+        <input type="text" class="form-control" formControlName="firstName" name="firstname" [(ngModel)]="firstname">
+      </div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label class="control-label">Prénom</label>
+            <input type="text" class="form-control" formControlName="lastName" name="lastname" [(ngModel)]="lastname">
+          </div>
+        </div>
+        </div>
+        <div class="form-row">
+      <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">Téléphone</label>
+        <input type="number" class="form-control" formControlName="Phone" name="phone" [(ngModel)]="phone">
+      </div>
+    </div>
+ 
+        <div class="col-md-6 mb-3">
+  <div class="form-group">
+    <label class="control-label">Adresse</label>
+    <input type="text" class="form-control" formControlName="Address" name="address" [(ngModel)]="address">
+  </div>
+  </div>
+  
+    </div>
+      
+       <button class="btn btn-primary pull-right" type="submit">Ajouter</button>
+    </form>
+    <br>
+
+  <br>
+  <br>
+    <div class="alert alert-danger" *ngIf="errorMessage"> {{ errorMessage }}</div>
+  </div>
+</div>
+</div>

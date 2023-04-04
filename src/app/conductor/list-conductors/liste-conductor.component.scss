@@ -1,0 +1,60 @@
+.button {
+    
+    border: none;
+   
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  
+  .button5 {
+    background-color: #4CAF50;
+  }
+  .button8 {
+  
+    background-color: red;
+  }
+
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 10px;
+    margin-left: 8px;
+    min-width: 120px;
+   
+  }
+  
+ 
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+  }
+.table{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.h1style{
+  margin-top: 3%;
+  font-size:250%;
+  color:rgb(26, 9, 109);
+  text-align:center;
+}

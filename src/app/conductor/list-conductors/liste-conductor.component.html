@@ -1,0 +1,44 @@
+
+<h1 class="h1style">Liste des conducteurs</h1>
+<br>
+<table style="color: black;font-size: 3em;" mdbTable class="table table-bordered">
+    <thead style="color: black;font-size: 3em;">
+      <tr>
+        <th >Nom</th>
+        <th>Adresse</th>
+        <th>Téléphone</th>
+        <th >Etat</th>
+        <th >Action</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let item1 of listconductor.reverse()">
+       
+        <td>{{ item1.firstname }} {{ item1.lastname }}</td>
+        <td>{{ item1.address }} </td>
+        <td>{{ item1.phone }}</td>
+       
+        <td *ngIf="item1.state == 1; else elseBlock"> <button class="button button8" matTooltip="{{ item1.message }}" ></button> 
+        </td> 
+        <ng-template #elseBlock>
+        <td> <button class="button button5" ></button> 
+        </td>  
+      </ng-template>
+        <td>
+          <div class="example-button-container">
+            <button style="margin-right: 12%" mat-mini-fab color="warn" (click)="openDialog(item1.$key)">
+              <mat-icon>delete</mat-icon></button>
+              <button mat-mini-fab color="green" (click)="edit(item1.$key)" >
+                <mat-icon>edit</mat-icon>
+            </button>
+           
+          </div>
+        </td>
+       
+      
+      </tr>
+    
+    </tbody>
+  </table>
